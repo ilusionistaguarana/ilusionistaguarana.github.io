@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: http://www.biancagalindo.com.br/sitemap.xml
+Sitemap: http://www.pedroguarana.com.br/sitemap.xml

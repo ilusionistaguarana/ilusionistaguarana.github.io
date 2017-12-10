@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 #home {
-	max-height: 920px;
+	/*max-height: 920px;*/
 }
 
 #main-content{
@@ -204,13 +204,13 @@ hr{
 	padding-top: 4px
 }
 
-.pedro-guarana-logo .font-bianca{
+.pedro-guarana-logo .font-pedro{
 	font-size: 24px;
 	line-height: 24px;
 	margin-bottom: -4px
 }
 
-.pedro-guarana-logo .font-galindo{
+.pedro-guarana-logo .font-guarana{
 	font-size: 20px;
 	line-height: 20px;
 }
@@ -220,7 +220,7 @@ hr{
 --------------------*/
 
 .main-color{
-	color:#00CCCB !important;
+	color:#abb3ba !important;
 }
 
 .bg-color-pink{
@@ -228,8 +228,13 @@ hr{
     background:#F28C83;
 }
 
+.bg-color-green{
+    color:#fff;
+    background:#097B17;
+}
+
 .bg-main-color{
-	background:#262932;
+	background:#000;
 	color:#fff;
 }
 
@@ -244,6 +249,11 @@ hr{
 
 .white-bg{
 	background: #fff;
+	color:#000;
+}
+
+.white-bg .btn{
+	color: #000 !important;
 }
 
 .polygon-bg{
@@ -260,6 +270,10 @@ hr{
 
 .shadow-black{
 	text-shadow: 1px 0 2px black, -1px 0 2px black, 0 1px 2px black, 0 -1px 2px black, 1px 1px 2px black, -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black;
+}
+
+.shadow-mini{
+	text-shadow: 1px 0 1px black, -1px 0 1px black, 0 1px 1px black, 0 -1px 1px black, 1px 1px 1px black, -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black;
 }
 
 
@@ -339,7 +353,7 @@ hr{
 .btn-dc.btn-main-color,
 .btn-dc.btn-main-color:hover,
 .btn-dc.btn-main-color:focus{
-	color: #00CCCB;
+	color: #fff;
 }
 
 /*-----------------------
@@ -461,7 +475,7 @@ hr{
 
 #home{
 	position: relative;
-	height:100%;
+	height:100% !important;
 	min-height:860px;
 	margin-bottom:-64px;
 	background: url('../images/header-bg.jpg') no-repeat;
@@ -508,7 +522,7 @@ hr{
 }
 
 
-.text-header-logo .font-bianca{
+.text-header-logo .font-pedro{
 	font-size: 62px;
 	line-height: 62px;
 	font-weight: 400;
@@ -551,8 +565,13 @@ hr{
 
 
 .scroll-down{
-	margin-bottom: -60px;
+	position: absolute;
+	bottom: 100px;
 	text-align: center;
+	z-index: 10;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
 }
 
 .scroll-down a{
@@ -600,8 +619,8 @@ hr{
 }
 
 .service-item:nth-child(2){
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
 }
 
 .service-item .service-icon{
@@ -609,8 +628,8 @@ hr{
 	margin:0 auto 30px;
 	width:180px;
 	height:180px;
-	border:1px solid #ddd;
-	color:#89949C;
+	border:1px solid #fff;
+	color:#ddd;
 	border-radius: 50%;
 	overflow: hidden;
 	-webkit-transition: all .2s ease-in;
@@ -631,14 +650,18 @@ hr{
 }
 
 .service-item:hover .service-icon{
-	color:#00CCCB;
+	color:#fff;
 	border-color:transparent;
 }
 
 .service-item h3, .service-item h4, .service-item h5, .service-item h6{
 	font-size: 21px;
-	font-weight: 400;
-	color:#39444C;
+	font-weight: bold;
+	color:#1A0100;
+}
+
+.service-item p{
+	color:#fff;
 }
 
 .btn-group{
@@ -650,19 +673,21 @@ hr{
 	font-size: 16px;
 	background: none;
 	border-color:#b9c4cC;
-	color:#858a95;
+	color:#fff;
 	-webkit-transition: all .2s ease-out;
 	transition: all .2s ease-out;
+	font-weight: bold;
 }
 
 .btn-group .btn:hover{
-	color:#39444C;
+	color:#000;
 }
 
 .btn-group .btn.active{
-	color:#00CCCB;
+	color:#000;
 	background:#fff;
 	box-shadow: none;
+	font-weight: bold;
 }
 
 .btn-group .btn:first-child{
@@ -691,6 +716,19 @@ hr{
 	transition:none;
 }
 
+.texture-background{
+	background-image: url(../images/texture-background.png);
+}
+
+.red-background{
+	background-color: #9F130C !important;
+}
+
+
+.red-background .section-title{
+	color: #fff !important;
+}
+
 /*----------------------
 ---- Call to Action ----
 ------------------------*/
@@ -707,6 +745,13 @@ hr{
 	font-weight: 400;
 }
 
+.citation {
+	margin-bottom: 0 !important;
+}
+
+.citation-author {
+	font-size: 20px !important;
+}
 
 /*------------------------------------
 ---- About Milton Erickson Styles ----
@@ -955,7 +1000,6 @@ hr{
 
 #gallery-container {
 	margin: 0 0 80px;
-	background:#fff;
 	-webkit-transition: none;
 	transition: none;
 }
@@ -968,7 +1012,6 @@ hr{
 	margin-bottom: 2px;
 	overflow:hidden;
 	cursor: pointer;
-	background:#fff;
 	max-width: 283px;
 	max-height: 212px;
 }
@@ -1207,16 +1250,16 @@ hr{
 	transition:opacity .6s ease-out .6s;
 }
 
-#testimonials .media-body,
-#testimonials .media-left img{
+#depoimentos .media-body,
+#depoimentos .media-left img{
 	-webkit-transform: translateX(-50px);
 	transform: translateX(-50px);
 	-webkit-transition: -webkit-transform .6s ease-out 0s;
 	transition: transform .6s ease-out 0s;
 }
 
-#testimonials .media-left + .media-body,
-#testimonials .media-right img{
+#depoimentos .media-left + .media-body,
+#depoimentos .media-right img{
 	-webkit-transform: translateX(50px);
 	transform: translateX(50px);
 	-webkit-transition: -webkit-transform .6s ease-out 0s;
@@ -1233,10 +1276,10 @@ hr{
 	transition: transform .6s ease-out .4s;
 }
 
-.touch #testimonials .media-body,
-.touch #testimonials .media-left img,
-.touch #testimonials .media-left + .media-body,
-.touch #testimonials .media-right img{
+.touch #depoimentos .media-body,
+.touch #depoimentos .media-left img,
+.touch #depoimentos .media-left + .media-body,
+.touch #depoimentos .media-right img{
 	-webkit-transform: translateX(0) !important;
 	transform: translateX(0) !important;
 }
@@ -1273,26 +1316,26 @@ hr{
 	color:#00CCCB;
 }
 
-#testimonials .media{
+#depoimentos .media{
 	margin:0 0 100px;
 	padding:10px 0;
 }
 
-#testimonials .media:last-child{
+#depoimentos .media:last-child{
 	margin-bottom: 0;
 }
 
-#testimonials .media-left img{
+#depoimentos .media-left img{
 	margin-right:40px;
 	max-width:180px;
 }
 
-#testimonials .media-right img{
+#depoimentos .media-right img{
 	margin-left: 40px;
 	max-width:180px;
 }
 
-#testimonials .media-body{
+#depoimentos .media-body{
 	position: relative;
 	padding:30px 60px 40px;
 	background: #fff;
@@ -1300,7 +1343,7 @@ hr{
 	border-radius: 5px;
 }
 
-#testimonials .media-body:before{
+#depoimentos .media-body:before{
 	display: block;
 	position: absolute;
 	content:"";
@@ -1312,7 +1355,7 @@ hr{
 	border-left:20px solid #e9ecf0;
 }
 
-#testimonials .media-body:after{
+#depoimentos .media-body:after{
 	display: block;
 	position: absolute;
 	content:"";
@@ -1324,7 +1367,7 @@ hr{
 	border-left:20px solid #fff;
 }
 
-#testimonials .media-left + .media-body:before{
+#depoimentos .media-left + .media-body:before{
 	display: block;
 	position: absolute;
 	content:"";
@@ -1336,7 +1379,7 @@ hr{
 	border-right:20px solid #e9ecf0;
 }
 
-#testimonials .media-left + .media-body:after{
+#depoimentos .media-left + .media-body:after{
 	display: block;
 	position: absolute;
 	content:"";
@@ -1348,24 +1391,24 @@ hr{
 	border-right:20px solid #fff;
 }
 
-#testimonials .testimonial{
+#depoimentos .testimonial{
 	font-size: 18px;
 }
 
-#testimonials .testimonial:before{
+#depoimentos .testimonial:before{
 	margin-left: -13px;
 	margin-right: 3px;
 	font-size: 24px;
 	content: "\201C";
 }
 
-#testimonials .testimonial:after{
+#depoimentos .testimonial:after{
 	margin-left: 3px;
 	font-size: 24px;
 	content: "\201D";
 }
 
-#testimonials .client{
+#depoimentos .client{
 	margin-bottom: 0;
 	font-style: italic;
 	text-align:right;
@@ -1432,7 +1475,7 @@ hr{
 }
 
 #contato .email{
-	font-size: 26px;
+	font-size: 23px;
 }
 
 #contato .email img{
@@ -1611,6 +1654,7 @@ hr{
 	width: 100%;
 	height: 500px;
 	margin: 0 auto;
+	color: #222;
 }
 
 #gmap .infowin{
@@ -1865,7 +1909,7 @@ hr{
 @media (max-width:1499px){
 	
 	#home{
-		min-height:810px;
+		/*min-height:810px;*/
 		margin-bottom:-64px;
 	}
 
@@ -1891,7 +1935,7 @@ hr{
 	}
 			
 	#home{
-		min-height:768px;
+		/*min-height:768px;*/
 		margin-bottom:-64px;
 	}
 
@@ -1932,7 +1976,7 @@ hr{
 	}
 		
 	#home{
-		min-height:768px;
+		/*min-height:768px;*/
 		margin-bottom:-64px;
 	}
 
@@ -2087,7 +2131,7 @@ hr{
 	}
 	
 	#home{
-		min-height:480px;
+		/*min-height:480px;*/
 		margin-bottom:-64px;
 	}
 
@@ -2206,26 +2250,26 @@ hr{
 		margin: 40px auto !important;
 	}
 	
-	#testimonials .media-left,
-	#testimonials .media-right{
+	#depoimentos .media-left,
+	#depoimentos .media-right{
 		display: none;
 	}
 
-	#testimonials .media-body:after,
-	#testimonials .media-body:before{
+	#depoimentos .media-body:after,
+	#depoimentos .media-body:before{
 		display: none !important;
 	}
 	
-	#testimonials .media-body{
+	#depoimentos .media-body{
 		padding:15px 30px;
 		border-width: 1px;
 	}
 	
-	#testimonials .testimonial{
+	#depoimentos .testimonial{
 		font-size: 16px;
 	}
 	
-	#testimonials .media{
+	#depoimentos .media{
 		margin-bottom: 40px;
 	}
 	
